@@ -85,6 +85,19 @@
         <img id="previewImg" class="preview-img" alt="MRI preview">
       </div>
 
+      <div class="sample-section">
+        <p class="sample-label">No scan handy? Try a sample:</p>
+        <div class="sample-buttons">
+          <button type="button" class="sample-btn" data-sample="glioma">Glioma</button>
+          <button type="button" class="sample-btn" data-sample="meningioma">Meningioma</button>
+          <button type="button" class="sample-btn" data-sample="notumor">No Tumor</button>
+          <button type="button" class="sample-btn" data-sample="pituitary">Pituitary</button>
+        </div>
+        <p class="sample-note">Model is trained on axial MRI slices from a clinical
+        dataset — results are most reliable on scans in that same format. Casual
+        photos (screenshots, stock images) may not classify accurately.</p>
+      </div>
+
       <button type="button" class="btn-primary" id="analyzeBtn" disabled>Analyze Scan</button>
     </div>
 

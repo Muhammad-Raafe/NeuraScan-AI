@@ -237,6 +237,24 @@ a { text-decoration: none; color: inherit; }
 .btn-primary:hover:not(:disabled) { background: var(--teal); transform: translateY(-1px); }
 .btn-primary:disabled { opacity: 0.4; cursor: not-allowed; }
 
+.sample-section { margin-bottom: 20px; }
+.sample-label { font-size: 0.82rem; font-weight: 600; color: var(--text-dark); margin: 0 0 10px; }
+.sample-buttons { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+.sample-btn {
+  background: var(--teal-light);
+  color: var(--teal);
+  border: 1px solid transparent;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.sample-btn:hover { background: #fff; border-color: var(--teal); }
+.sample-btn.loading { opacity: 0.6; cursor: wait; }
+.sample-note { font-size: 0.74rem; color: var(--text-mute); line-height: 1.5; margin: 0; }
+
 .btn-ghost {
   background: transparent;
   border: 1.5px solid var(--border);

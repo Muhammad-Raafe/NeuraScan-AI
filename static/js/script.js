@@ -48,6 +48,25 @@ function handleFile(file) {
   analyzeBtn.disabled = false;
 }
 
+// ---------------- Sample scan buttons ----------------
+document.querySelectorAll('.sample-btn').forEach(btn => {
+  btn.addEventListener('click', async () => {
+    const sampleName = btn.dataset.sample;
+    btn.classList.add('loading');
+
+    try {
+      const res = await fetch(`/static/samples/${sampleName}.jpg`);
+      const blob = await res.blob();
+      const file = new File([blob], `${sampleName}.jpg`, { type: blob.type });
+      handleFile(file);
+    } catch (err) {
+      alert('Could not load sample image.');
+    } finally {
+      btn.classList.remove('loading');
+    }
+  });
+});
+
 // ---------------- Analyze → real backend prediction ----------------
 analyzeBtn.addEventListener('click', async () => {
   if (!selectedFile) return;
